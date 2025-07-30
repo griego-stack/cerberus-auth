@@ -4,9 +4,17 @@ import { AuthModule } from './context/auth/auth.module';
 import { UserModule } from './context/user/user.module';
 import { AppConfigModule } from './shared/config/config.module';
 import { NotificationsModule } from './context/notifications/notifications.module';
+import { DatabaseModule } from './shared/database/database.module';
 
 @Module({
-  imports: [AuthModule, UserModule, AuditModule, AppConfigModule, NotificationsModule],
+  imports: [
+    AuthModule,
+    UserModule,
+    AuditModule,
+    AppConfigModule,
+    NotificationsModule,
+    DatabaseModule,
+  ],
   controllers: [],
   providers: [],
 })
