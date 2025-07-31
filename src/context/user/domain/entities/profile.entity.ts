@@ -2,7 +2,7 @@ export interface IUserProfile {
   userId: number;
   firstName?: string;
   lastName?: string;
-  email?: string;
+  email: string;
   avatarUrl?: string;
 }
 
@@ -10,7 +10,7 @@ export class UserProfileEntity {
   userId: number;
   firstName?: string;
   lastName?: string;
-  email?: string;
+  email: string;
   avatarUrl?: string;
 
   constructor(attrs: IUserProfile) {

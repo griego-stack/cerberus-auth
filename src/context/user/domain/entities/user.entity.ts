@@ -21,8 +21,8 @@ export class UserEntity {
   roleId: number;
   isActive: boolean;
   isEmailVerified: boolean;
-  createdAt: Date;
-  updatedAt: Date;
+  createdAt?: Date;
+  updatedAt?: Date;
   lastLoginAt?: Date;
 
   constructor(user: IUser) {
@@ -34,8 +34,8 @@ export class UserEntity {
     this.roleId = user.roleId;
     this.isActive = user.isActive ?? true;
     this.isEmailVerified = user.isEmailVerified ?? false;
-    this.createdAt = user.createdAt ?? new Date();
-    this.updatedAt = user.updatedAt ?? new Date();
+    this.createdAt = user.createdAt;
+    this.updatedAt = user.updatedAt;
     this.lastLoginAt = user.lastLoginAt;
   }
 

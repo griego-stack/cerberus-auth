@@ -9,7 +9,7 @@ export const databaseProviders = [
       const dbConfig = config.mainDatabaseConfig;
       const dataSource = new DataSource({
         ...dbConfig,
-        entities: [__dirname + '/../../**/*.entity{.ts,.js}'],
+        entities: [__dirname + '/../../**/*.db.entity{.ts,.js}'],
         migrations: [__dirname + '/../../migrations/**/*{.ts,.js}'],
       });
 

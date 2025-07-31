@@ -1,7 +1,17 @@
+export type AuditLogLevel =
+  | 'info'
+  | 'warn'
+  | 'error'
+  | 'debug'
+  | 'trace'
+  | 'fatal'
+  | 'critical'
+  | 'alert';
+
 export interface IAuditLog {
   id: number;
   userId?: number;
-  level: string;
+  level: AuditLogLevel;
   message: string;
   metadata?: Record<string, any>;
   createdAt?: Date;
@@ -10,7 +20,7 @@ export interface IAuditLog {
 export class AuditLogEntity {
   id: number;
   userId?: number;
-  level: string;
+  level: AuditLogLevel;
   message: string;
   _metadata?: string;
   createdAt?: Date;
