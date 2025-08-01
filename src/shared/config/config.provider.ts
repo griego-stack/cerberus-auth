@@ -1,3 +1,5 @@
+import SMTPTransport from 'nodemailer/lib/smtp-transport';
+
 export interface ConfigDatabase {
   type: 'mysql' | 'postgres' | 'sqlite' | 'mariadb';
   host: string;
@@ -16,4 +18,7 @@ export interface AppConfigProvider {
   // DATABASE
 
   mainDatabaseConfig: ConfigDatabase;
+
+  // EMAIL
+  emailConfigTransport: string | SMTPTransport.Options | SMTPTransport;
 }

@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { AppConfigProvider, ConfigDatabase } from './config.provider';
+import SMTPTransport from 'nodemailer/lib/smtp-transport';
 
 @Injectable()
 export class AppConfigService implements AppConfigProvider {
@@ -34,6 +35,20 @@ export class AppConfigService implements AppConfigProvider {
       password: this.config.get<string>('DB_PASSWORD') || '',
       database: this.config.get<string>('DB_NAME') || 'cerberus_auth',
       syncronize: this.config.get<boolean>('DB_SYNCRONIZE') || false,
+    };
+  }
+
+  //  EMAIL
+
+  get emailConfigTransport(): SMTPTransport | SMTPTransport.Options | string {
+    return {
+      host: this.config.get<string>('EMAIL_HOST') || 'smtp.example.com',
+      port: this.config.get<number>('EMAIL_PORT') || 587,
+      secure: this.config.get<boolean>('EMAIL_SECURE') || false,
+      auth: {
+        user: this.config.get<string>('EMAIL_AUTH_USER') || 'user@example.com',
+        pass: this.config.get<string>('EMAIL_AUTH_PASS') || 'password',
+      },
     };
   }
 }
