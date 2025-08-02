@@ -8,12 +8,12 @@ import { DatabaseModule } from './shared/database/database.module';
 
 @Module({
   imports: [
-    AuthModule,
-    UserModule,
-    AuditModule,
     AppConfigModule,
-    NotificationsModule,
+    AuditModule,
+    AuthModule,
     DatabaseModule,
+    NotificationsModule,
+    UserModule,
   ],
   controllers: [],
   providers: [],
