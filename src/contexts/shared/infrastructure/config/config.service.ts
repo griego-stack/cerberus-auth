@@ -26,6 +26,12 @@ export class AppConfigService implements AppConfigProvider {
     return this.config.get<string>('API_PREFIX') || 'api';
   }
 
+  // SECRETS
+
+  get cookieSecret(): string | undefined {
+    return this.config.get<string>('COOKIE_SECRET');
+  }
+
   // DATABASE
 
   get mainDatabaseConfig(): ConfigDatabase {

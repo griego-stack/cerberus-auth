@@ -12,6 +12,10 @@ export interface AppConfigProvider {
 
   apiPrefix: string;
 
+  // SECRETS
+
+  cookieSecret?: string;
+
   // DATABASE
 
   mainDatabaseConfig: ConfigDatabase;
