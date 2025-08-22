@@ -1,7 +1,7 @@
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 import { UserDBEntity } from './user.db.entity';
 
-@Entity({ name: 'provider' })
+@Entity({ name: 'provider', orderBy: { id: 'ASC' } })
 export class UserProviderDBEntity {
   @PrimaryGeneratedColumn()
   id: number;

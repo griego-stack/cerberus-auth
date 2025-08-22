@@ -7,7 +7,7 @@ import {
 } from 'typeorm';
 import { UserDBEntity } from '../user/user.db.entity';
 
-@Entity({ name: 'confirmation_token' })
+@Entity({ name: 'confirmation_token', orderBy: { id: 'ASC' } })
 export class ConfirmationTokenDBEntity {
   @PrimaryGeneratedColumn()
   id: number;

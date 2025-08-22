@@ -7,7 +7,7 @@ import {
 } from 'typeorm';
 import { RefreshTokenDBEntity } from './refresh-token.db.entity';
 
-@Entity({ name: 'user_device' })
+@Entity({ name: 'user_device', orderBy: { id: 'ASC' } })
 export class UserDeviceDBEntity {
   @PrimaryGeneratedColumn()
   id: number;

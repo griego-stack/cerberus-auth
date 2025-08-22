@@ -8,7 +8,7 @@ import {
 } from 'typeorm';
 import { UserDBEntity } from '../user/user.db.entity';
 
-@Entity({ name: 'refresh_token' })
+@Entity({ name: 'refresh_token', orderBy: { id: 'ASC' } })
 export class RefreshTokenDBEntity {
   @PrimaryGeneratedColumn()
   id: number;

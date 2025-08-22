@@ -17,7 +17,7 @@ import { ConfirmationTokenDBEntity } from '../auth/confirmation-token.db.entity'
 import { UserMFADBEntity } from '../auth/user-mfa.db.entity';
 import { RefreshTokenDBEntity } from '../auth/refresh-token.db.entity';
 
-@Entity({ name: 'user' })
+@Entity({ name: 'user', orderBy: { id: 'ASC' } })
 export class UserDBEntity {
   @PrimaryGeneratedColumn()
   id: number;

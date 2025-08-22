@@ -17,7 +17,11 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "mig-gen": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js migration:generate -d ./scripts/seed/ormconfig.ts",
+    "mig-run": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js migration:run -d ./scripts/seed/ormconfig.ts",
+    "mig-rev": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js migration:revert -d ./scripts/seed/ormconfig.ts",
+    "seed": "ts-node --project scripts/seed/tsconfig.json scripts/seed/index.ts"
   },
   "dependencies": {
     "@fastify/cookie": "^11.0.2",

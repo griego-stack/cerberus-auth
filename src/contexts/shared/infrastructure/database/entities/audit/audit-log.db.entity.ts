@@ -8,7 +8,7 @@ import {
 } from 'typeorm';
 import { UserDBEntity } from '../user/user.db.entity';
 
-@Entity('audit_log')
+@Entity({ name: 'audit_log', orderBy: { id: 'ASC' } })
 export class AuditLogDBEntity {
   @PrimaryGeneratedColumn()
   id: number;
