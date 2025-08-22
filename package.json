@@ -1,7 +1,7 @@
 {
   "name": "cerberus-auth",
   "version": "0.0.1",
-  "description": "",
+  "description": "Cerberus is a NestJS authentication template built with Hexagonal Architecture, TypeORM, role-based access control, and multi-factor authentication — designed to guard your app’s core like a true gatekeeper.",
   "author": "Griego Code",
   "private": true,
   "license": "MIT",
@@ -32,7 +32,8 @@
     "nodemailer": "^7.0.5",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1",
-    "typeorm": "^0.3.26"
+    "typeorm": "^0.3.26",
+    "typeorm-extension": "^3.7.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.2.0",
@@ -47,6 +48,7 @@
     "@types/node": "^22.10.7",
     "@types/nodemailer": "^7.0.1",
     "@types/supertest": "^6.0.2",
+    "chalk": "^5.6.0",
     "eslint": "^9.18.0",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.2.2",

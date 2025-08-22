@@ -1,6 +1,5 @@
 import { Module } from '@nestjs/common';
-import { AppConfigModule } from './contexts/shared/infrastructure';
-import { DatabaseModule } from './contexts/shared/infrastructure/database/database.module';
+import { AppConfigModule, DatabaseModule } from './contexts/shared';
 
 @Module({
   imports: [AppConfigModule, DatabaseModule],
